@@ -1,4 +1,4 @@
-from PTdict import ptDict
+from PTdict import pt_dict
 
 table_info = {
     'name':['Name:'],
@@ -28,10 +28,11 @@ while True:
     print('\n')
 
     for i in user_input:
-        elem = ptDict[i]
+        elem = pt_dict[i]
         for k in elem.keys():
             table_info[k].append(elem[k])
     
     for k in table_info.keys():
         table_printer(table_info[k])
     print('\n')
+    

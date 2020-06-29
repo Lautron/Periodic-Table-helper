@@ -1,4 +1,4 @@
-import csv
+
 
 ptDict = {'Actinium': ['Ac', '89', '227', '138'], # Element: [Symbol, Z, A, Nº]
  'Aluminum': ['Al', '13', '26.982', '14'],        # Element: list[0], list[1], list[2], list[3]
@@ -144,16 +144,6 @@ def searchByNeutrons(userInput):
         if list[3] == userInput:
             infoSearcher(list)
 
-# def main(selectInput, userInput):
-#     if selectInput == 'x':
-#         searchBySymbol(userInput)
-#     if selectInput == 'z':
-#         searchByAtomicNumber(userInput)
-#     if selectInput == 'a':
-#         searchByAtomicMass(userInput)
-#     if selectInput == 'n':
-#         searchByNeutrons(userInput)
-#     return
 
 def main(selectInput, userInput):
   switch = {
@@ -165,9 +155,8 @@ def main(selectInput, userInput):
   function = switch.get(selectInput, "Invalid input")
   function(userInput)
 
+
 while True:
-    # ptFile = open('Periodic Table of Elements.csv')
-    # ptFileReader = csv.reader(ptFile)
     selectInput = input('Press X (to search by symbol), Z (to search by atomic number), A (to search by atomic mass),\nN (to search by neutrons)\n'
                         'Or type exit to leave\n')
     userInput = input('Write what you want to search\n')
