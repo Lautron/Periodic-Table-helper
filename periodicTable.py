@@ -120,8 +120,9 @@ ptDict = {'Actinium': ['Ac', '89', '227', '138'], # Element: [Symbol, Z, A, Nº]
  'Zirconium': ['Zr', '40', '91.224', '51']}
 
 def infoSearcher(list):
-    print(f'The symbol is: {list[0]}\nThe atomic number is: {list[1]}\nThe Atomic mass is: {list[2]}\n'
-          f'The number of neutrons is: {list[3]}\n')
+    sep_line = ''.center(40, '-')
+    print(f'\n{sep_line}\nThe symbol is: {list[0]}\n {sep_line}\nThe atomic number is: {list[1]}\n{sep_line}\nThe Atomic mass is: {list[2]}\n{sep_line}\n'
+          f'The number of neutrons is: {list[3]}\n{sep_line}\n')
 
 def searchBySymbol(userInput):
     for list in ptDict.values():

@@ -1,4 +1,6 @@
 from PTdict import pt_dict
+from spanishElems import spanish_elems_dict as sp_elems
+from nameFinder import get_key
 
 def table_printer(anyList):
     new_list = []
@@ -27,8 +29,12 @@ while True:
         break
     user_input = user_input.split()
     print('\n')
-
+    
     for i in user_input:
+        if len(i) > 2:
+            i = get_key(i, sp_elems)
+        if not i:
+            continue
         elem = pt_dict[i]
         for k in elem.keys():
             table_info[k].append(elem[k])
