@@ -1,15 +1,5 @@
 from PTdict import pt_dict
 
-table_info = {
-    'name':['Name:'],
-    'atomic mass':['Atomic mass:'],
-    'atomic number':['Atomic number:'],
-    'electrons':['Electrons:'],
-    'group':['Group:'],
-    'period':['Period:'],
-    'type':['Type:'],
-}
-
 def table_printer(anyList):
     new_list = []
     for i in anyList[1:]:
@@ -21,6 +11,17 @@ def table_printer(anyList):
 
 
 while True:
+
+    table_info = {
+    'name':['Name:'],
+    'atomic mass':['Atomic mass:'],
+    'atomic number':['Atomic number:'],
+    'electrons':['Electrons:'],
+    'group':['Group:'],
+    'period':['Period:'],
+    'type':['Type:'],
+}
+
     user_input = input('What elements do you want to compare?\n')
     if user_input == 'exit':
         break
